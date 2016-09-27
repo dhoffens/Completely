@@ -2,22 +2,22 @@
 
 <% @jobs.each do |j| %>
 
-<p> Name: 
-<%= j.name %>
-</p>
+<div> Name: 
+<%= link_to "#{j.name}", user_job_path(current_user, j) %>
+</div>
 
-<p> Description: 
+<div> Description: 
 <%= j.description %>
-</p>
+</div>
 
-<p> Budget: 
-$<%= j.budget_low %> - 
-$<%= j.budget_high %>
-</p>
+<div> Budget: 
+$<%= j.budget_low %> - $<%= j.budget_high %>
+</div>
 
-<p> Digital? 
+<div> Digital? 
 <%= j.digital %>
-</p>
+</div>
+
 <br>
 <% end %>
 <br>

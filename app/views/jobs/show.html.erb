@@ -1,0 +1,39 @@
+<h2>
+	Job Details Page
+</h2>
+
+<div>
+Name: <%= @the_job.name %>
+<br>
+Budget: <%= @the_job.budget_low %> -
+<%= @the_job.budget_high %>
+<br>
+Description: <%= @the_job.description %>
+<br>
+<% if @the_job.comments %>
+</div>
+
+<h4>
+Comments:
+</h4>
+
+<ul>
+  <% @the_job.comments.each do |the_comment| %>
+    <li>
+      <%= the_comment.message %>
+      <%= link_to "Edit", edit_product_review_path(@the_product, the_review) %>
+
+      <%= link_to "Delete", product_review_path(@the_product, the_review), method: "delete", data: { confirm: "Are you sure you want to delete \"#{the_review.message}\"?" } %>
+    </li>
+  <% end %>
+</ul>
+<% end %>
+
+<div>
+<h4> Add a comment </h4>
+<form>
+	<textarea rows="4" cols="40">
+	</textarea> <br>
+	<button type="submit">Submit comment</button>
+</form>
+</div>

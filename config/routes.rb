@@ -4,7 +4,10 @@ root 'site#home'
 devise_for :users
 
 resources :users do
-	resources :jobs 
+	resources :jobs do
+		resources :comments 
+	end
 end
+
 
 end
