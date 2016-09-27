@@ -1,0 +1,23 @@
+<h2> My Jobs </h2>
+
+<% @jobs.each do |j| %>
+
+<p> Name: 
+<%= j.name %>
+</p>
+
+<p> Description: 
+<%= j.description %>
+</p>
+
+<p> Budget: 
+$<%= j.budget_low %> - 
+$<%= j.budget_high %>
+</p>
+
+<p> Digital? 
+<%= j.digital %>
+</p>
+<br>
+<% end %>
+<br>

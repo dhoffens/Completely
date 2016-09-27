@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- 	<link rel="stylesheet" type="text/css" href="styles.css">
+ -->	<title>Completely - Task Executor</title>
+</head>
+
+<body>
+
+
+
+<% if current_user %>
+
+  <h3> Hey <%= current_user.name %>! </h3>
+
+<% end %>
+
+<h1>Welcome to <strong>Completely</strong></h1>
+
+<h2>We're an execution platform. </h2><br>
+<h4>Our goal is to connect those that need help to accomplish <br> a task or goal with those that are able to do so.<br>
+So, which are you?</h4>
+
+
+
+<form>
+<%= link_to "Post new", new_user_job_path(current_user), class: "btn btn-success btn-submit" %>
+
+<%= link_to "View jobs", user_jobs_path(current_user), class: "btn btn-success btn-open-jobs" %>
+</form>
+<br>
+
+<hr>
+
+<div class="how">
+<h3>
+	How Completely Works
+</h3>
+<h4>
+	1 - Tell us what you'd like to accomplish. We want to help you succeed. 
+<br> 
+	<small>This could be anything from "I need help moving, to I need to learn Spanish, to teach me how to work out"...or anything in between.</small>
+<br>
+<br>
+	2- Post your job on our interface. Locals will see your post and respond. 
+<br>
+	<small>If your need is digital, then people from all over the world can see it. You can then negotiate a fair price or trade.</small>
+<br>
+<br>
+	3 - Hire the right person for the job.
+<br>
+	<small>Accomplish your goals. Rinse and repeat.</small>
+</h4>
+
+</div>
+
+<hr>
+
+<footer>
+  Made with &hearts; at Ironhack 
+</footer>
+
+</body>
+</html>

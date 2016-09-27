@@ -1,0 +1,22 @@
+<%= form_for [current_user, @job] do |j| %>
+
+  <%= j.label :name %>:
+  <%= j.text_field :name %><br />
+
+  <%= j.label :description %>:
+  <%= j.text_area :description %><br />
+
+  <%= j.label :budget_low %>:
+  <%= j.number_field :budget_low %><br />
+
+  <%= j.label :budget_high %>:
+  <%= j.number_field :budget_high %><br />
+
+  <%= j.label :zip %>:
+  <%= j.text_area :zip %><br />
+
+  <%= j.label :digital %>:
+  <%= j.check_box :digital %><br />
+
+  <%= j.submit %>
+<% end %>
