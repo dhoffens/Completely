@@ -17,12 +17,14 @@
 			<h4>
 				Our goal is to connect those that need help to accomplish <br> a task or goal with those that are able to do so.
 			</h4>
+				<% if current_user %>
 				<div>
 					<form>
 						<%= link_to "Post new job", new_user_job_path(current_user), class: "btn btn-success btn-submit" %>
 						<%= link_to "View open jobs", user_jobs_path(current_user), class: "btn btn-success btn-open-jobs" %>
 					</form>
 				</div>
+				<% end %>
 					<hr>
 				<div class="how">
 					<h3> How Completely Works </h3>
