@@ -27,9 +27,6 @@ job3 = user1.jobs.create!(name: "Cooking help", description: "Help me cook dinne
 job4 = user1.jobs.create!(name: "Website development", description: "Make me a dynamic website for my small business", budget_low: 500, budget_high: 1000, zip: 33131, user_id: 1, digital: true)
 job5 = user1.jobs.create!(name: "Take me to work", description: "Take me to work every day this week", budget_low: 80, budget_high: 100, zip: 33131, user_id: 1, digital: false)
 
-job1.comments.create!()
-
-
 user2.jobs.create!(name: "Moving assistance", description: "Help me move", budget_low: 20, budget_high: 50, zip: 33131, user_id: 2, digital: false)
 user2.jobs.create!(name: "Spanish tutor", description: "Teach me conversational spanish", budget_low: 100, budget_high: 200, zip: 33131, user_id: 2, digital: false)
 user2.jobs.create!(name: "Cooking help", description: "Help me cook dinner for 10 people", budget_low: 50, budget_high: 100, zip: 33131, user_id: 2, digital: false)
@@ -83,3 +80,16 @@ user10.jobs.create!(name: "Spanish tutor", description: "Teach me conversational
 user10.jobs.create!(name: "Cooking help", description: "Help me cook dinner for 10 people", budget_low: 50, budget_high: 100, zip: 33131, user_id: 10, digital: false)
 user10.jobs.create!(name: "Website development", description: "Make me a dynamic website for my small business", budget_low: 500, budget_high: 1000, zip: 33131, user_id: 10, digital: true)
 user10.jobs.create!(name: "Take me to work", description: "Take me to work every day this week", budget_low: 80, budget_high: 100, zip: 33131, user_id: 10, digital: false)
+
+#comments 
+
+job1.comments.create!(job_id: 1, message: "first!")
+job1.comments.create!(job_id: 1, message: "second!")
+job2.comments.create!(job_id: 2, message: "first!")
+job2.comments.create!(job_id: 2, message: "second!")
+job3.comments.create!(job_id: 3, message: "first!")
+job3.comments.create!(job_id: 3, message: "second!")
+job4.comments.create!(job_id: 4, message: "first!")
+job4.comments.create!(job_id: 4, message: "second!")
+job5.comments.create!(job_id: 5, message: "first!")
+job5.comments.create!(job_id: 5, message: "second!")
