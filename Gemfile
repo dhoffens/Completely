@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
+
+#geolocation information from address entry
+gem 'geocoder'
+#ruby js 
 gem 'sprockets-es6', require: "sprockets/es6"
+#user authentication/authorization
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
