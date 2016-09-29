@@ -1,5 +1,65 @@
-<h2> All Open Jobs </h2>
+<!DOCTYPE html>
 
+  <head>
+
+    <title>Simple markers</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      function initMap() {
+        var myLatLng = {lat: 25.7617, lng: -80.1918};
+        var brickell = {lat: 25.7602, lng: -80.1959};
+        var coralGables = {lat: 25.7215, lng: -80.2684};
+        var wynwood = {lat: 25.8042, lng: -80.1989};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+      	});
+
+        var marker2 = new google.maps.Marker({
+          position: brickell,
+          map: map,
+          title: 'Hi World!'
+        });
+
+        var marker3 = new google.maps.Marker({
+        	position: coralGables,
+        	map: map,
+        	title: 'Heyoo!'
+        });
+
+        var marker4 = new google.maps.Marker({
+        	position: wynwood,
+        	map: map,
+        	title: 'Hipsters r here!'
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0uIiccm1FNZ7sff1BOLILCs7VKPTg9vQ&callback=initMap">
+    </script>
+
+
+<!-- old jobs list -->
 <% @jobs.each do |j| %>
 
 <div> Name: 
@@ -21,3 +81,9 @@ $<%= j.budget_low %> - $<%= j.budget_high %>
 <br>
 <% end %>
 <br>
+
+
+
+  </body>
+</html>
+
