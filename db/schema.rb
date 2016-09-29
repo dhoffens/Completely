@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927190519) do
+ActiveRecord::Schema.define(version: 20160929183528) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "message"
@@ -31,6 +31,9 @@ ActiveRecord::Schema.define(version: 20160927190519) do
     t.boolean  "digital"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "address"
     t.index ["user_id"], name: "index_jobs_on_user_id"
   end
 
