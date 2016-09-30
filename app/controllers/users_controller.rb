@@ -10,4 +10,8 @@ class UsersController < ApplicationController
     @user = User.find_by(params[:id])
     render :show
   	end
+
+  	def index
+  	@users = User.all
+  	end
 end

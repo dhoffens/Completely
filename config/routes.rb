@@ -7,6 +7,12 @@ resources :users do
 		resources :comments 
 	end
 end
+
+scope :api do
+	resources :jobs, only: [:index], controller: "jobs_api"
+end
+
+get '/jobs', to: "jobs#index"
 get '/purpose', to: 'site#purpose'
 get '/company', to: 'site#company'
 get '/contact', to: 'site#contact'

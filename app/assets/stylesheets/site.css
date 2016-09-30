@@ -1,0 +1,90 @@
+h1, h2, h3, h4 {
+	text-align: center;
+	color: white;
+}
+
+h1 {
+	font-size: 60px;
+	text-shadow: 3px 2px 2px black;
+}
+
+h2 {
+	font-size: 40px;
+	text-shadow: 3px 2px 2px black;
+}
+
+h3, h4 {
+	text-shadow: 2px 2px 1px black;	
+}
+
+
+
+footer {
+	background-color: #333;
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px 1px black;	
+}
+
+p {
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px 1px black;	
+	font-size: x-small;
+}
+
+.home-btn {
+	width: 200px;
+	height: 50px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin: 7px;
+	padding: 15px 20px 5px 20px;
+}
+
+.nav-btns {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+div {
+	text-align: center;
+}
+
+form {
+	text-align: center;
+}
+
+nav {
+	height: 5vh; 
+	margin: 0;
+	padding: 0;
+}
+
+.background {
+	background-image: url(/assets/background.jpg);
+	/*background-image: url("https://static.pexels.com/photos/27665/pexels-photo-27665.jpg");*/
+	background-size: cover;
+	height: 95vh;
+	margin: 0;
+	padding: 0;
+}
+
+.content {
+	position:relative;
+	top: 40px;
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+.how {
+	background-color: #5cb85c;
+}
+
+.donedeal-logo {
+	padding-left: 50px;
+	padding-right: 25px;
+}

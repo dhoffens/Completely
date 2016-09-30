@@ -1,53 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!-- 	<link rel="stylesheet" type="text/css" href="styles.css">
- -->	<title>Completely - Task Executor</title>
+	<title>DoneDeal - Local Services Marketplace</title>
 </head>
 
 <body>
-
-	<% if current_user %>
-  		<h3> Hey <%= current_user.name %>! </h3>
-	<% end %>
-	<div class="background-img-pen">
-	<h1>Welcome to <strong>Completely</strong></h1>	
-		<h3>We're a local services marketplace. </h3>
-			<h4>
-				Our goal is to connect local professionals with those that require their services.
-			</h4>
+	<div class="background">
+		<div class="content"><br><br><br>
+		<h1>Welcome to <strong>DoneDeal</strong></h1><br><br>
+			<h2>We're a local services marketplace.</h2><br>
+				<h3>Our goal is to connect local professionals with those that require their services.</h3><br>
+					<% unless current_user %>
+					<h3>Start by clicking the Register button in the top left!</h3>
+					<% end %>			
 				<% if current_user %>
+  				<h3> Hey <%= current_user.name %>! </h3>
 				<div>
-					<form>
-						<%= link_to "Post new job", new_user_job_path(current_user), class: "btn btn-success home-btn" %>
-						<%= link_to "View open jobs", user_jobs_path(current_user), class: "btn btn-success home-btn" %>
-					</form>
+					<%= link_to "Post new job", new_user_job_path(current_user), class: "btn btn-success home-btn" %>
+					<%= link_to "View open jobs", user_jobs_path(current_user), class: "btn btn-success home-btn" %>
 				</div>
 				<% end %>
+		</div>
 	</div>
-					<hr>
-				<div class="how">
-					<h3> How Completely Works </h3>
-					<h4> 1 - Tell us what you'd like to accomplish. We want to help you succeed. <br> 
-						<small>
-							This could be anything from "I need help moving, to I need to learn Spanish, to teach me how to work out"...or anything in between.
-						</small><br><br>
-						2- Post your job on our interface. Locals will see your post and respond. <br>
-						<small>
-							If your need is digital, then people from all over the world can see it. You can then negotiate a fair price.
-						</small><br><br>
-						3 - Hire the right person for the job. <br>
-						<small>Accomplish your goals. Rinse and repeat.</small>
-					</h4>
-				</div>
-					<hr>
-<footer>
-  Made with &hearts; at Ironhack 
+		<div class="how"><br>
+			<h3> How Completely Works </h3><br>
+			<h4>1 - Tell us what you'd like to accomplish. We want to help you succeed.</h4><br> 
+				<p>This could be anything from "I need help moving, to I need to learn Spanish, to teach me how to work out"...or anything in between.</p><br><br>
+			<h4>2- Post your job on our interface. Locals will see your post and respond.</h4><br>
+				<p>If your need is digital, then people from all over the world can see it. You can then negotiate a fair price.</p><br>
+			<h4>3 - Hire the right person for the job.</h4><br>
+				<p>Accomplish your goals. Rinse and repeat.</p>
+			<br>
+			<br>
+		</div>
+<footer><br><br>
+  <h4>Made with &hearts; at Ironhack </h4>
+<br><br><br><br>
 </footer>
-<br>
-<hr>
-<br>
-<br>
 </body>
 </html>
