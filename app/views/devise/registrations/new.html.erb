@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<div class="login"><br>
 
 <h2>Sign up</h2>
 
@@ -6,30 +6,27 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name, :class => "form" %><br />
     <%= f.text_field :name, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, :class => "form" %><br />
     <%= f.email_field :email %>
   </div>
 
   <div class="field">
-    <%= f.label :zip %><br />
+    <%= f.label :zip, :class => "form" %><br />
     <%= f.text_field :zip %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
+    <%= f.label :password, :class => "form" %><br>
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, :class => "form" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
@@ -39,3 +36,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>

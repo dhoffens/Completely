@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-
   <head>
-
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
     <title>Simple markers</title>
     <style>
       html, body {
@@ -11,6 +11,7 @@
       }
       #map {
         height: 100%;
+        width: 100%;
       }
     </style>
   </head>
@@ -20,9 +21,6 @@
 
       function initMap() {
         var myLatLng = {lat: 25.7617, lng: -80.1918};
-        var brickell = {lat: 25.7602, lng: -80.1959};
-        var coralGables = {lat: 25.7215, lng: -80.2684};
-        var wynwood = {lat: 25.8042, lng: -80.1989};
 
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 13,
@@ -34,25 +32,6 @@
           map: map,
           title: 'Hello World!'
       	});
-
-        var marker2 = new google.maps.Marker({
-          position: brickell,
-          map: map,
-          title: 'Hi World!'
-        });
-
-        var marker3 = new google.maps.Marker({
-        	position: coralGables,
-        	map: map,
-        	title: 'Heyoo!'
-        });
-
-        var marker4 = new google.maps.Marker({
-        	position: wynwood,
-        	map: map,
-        	title: 'Hipsters r here!'
-        });
-
       }
     </script>
     <script async defer
@@ -75,15 +54,9 @@
 $<%= j.budget_low %> - $<%= j.budget_high %>
 </div>
 
-<div> Digital? 
-<%= j.digital %>
-</div>
-
 <br>
 <% end %>
 <br>
-
-
 
   </body>
 </html>

@@ -1,8 +1,4 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
-
 $(document).on("turbolinks:load", function () {
-	console.log("JavaScript!");
 	findGeolocations();
 });
 
@@ -18,6 +14,21 @@ function findGeolocations () {
 
 function showGeolocations (theLocation) {
 	console.log(theLocation);
+
+	// map shows all the pins from current data
+
+	theLocation.forEach(function (theResult){
+		var theName = theResult.name;
+		var theLat = theResult.latitude;
+		var theLong = theResult.longitude;
+		var myLatLng = {lat: theLat, lng: theLong};
+	
+	var newmarker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: theName
+        });
+	})
 }
 
 function handleError (theError) {

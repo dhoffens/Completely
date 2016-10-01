@@ -71,6 +71,30 @@ nav {
 	padding: 0;
 }
 
+.login {
+	background-image: url(/assets/login.jpg);
+	background-size: cover;
+	height: 100vh;
+}
+
+.company {
+	background-image: url(/assets/company.jpg);
+	background-size: cover;
+	height: 100vh;
+}
+
+.contact {
+	background-image: url(/assets/contact.jpg);
+	background-size: cover;
+	height: 100vh;	
+}
+
+.purpose {
+	background-image: url(/assets/purpose.jpg);
+	background-size: cover;
+	height: 100vh;
+}
+
 .content {
 	position:relative;
 	top: 40px;
@@ -87,4 +111,9 @@ nav {
 .donedeal-logo {
 	padding-left: 50px;
 	padding-right: 25px;
+}
+
+.form {
+	color: white;
+	text-shadow: 1px 1px 1px black;	
 }

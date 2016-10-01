@@ -17,25 +17,25 @@
   				<h3> Hey <%= current_user.name %>! </h3>
 				<div>
 					<%= link_to "Post new job", new_user_job_path(current_user), class: "btn btn-success home-btn" %>
-					<%= link_to "View open jobs", user_jobs_path(current_user), class: "btn btn-success home-btn" %>
+					<a class="btn btn-success home-btn" href="/jobs">All Open Jobs</a>
 				</div>
 				<% end %>
 		</div>
 	</div>
 		<div class="how"><br>
-			<h3> How Completely Works </h3><br>
+			<h3> How DoneDeal Works </h3><br>
 			<h4>1 - Tell us what you'd like to accomplish. We want to help you succeed.</h4><br> 
-				<p>This could be anything from "I need help moving, to I need to learn Spanish, to teach me how to work out"...or anything in between.</p><br><br>
+				<h6>This could be anything from "I need help moving, learning Spanish, making a web site, teach me how to work out"...or anything in between.</h6> <br><br>
 			<h4>2- Post your job on our interface. Locals will see your post and respond.</h4><br>
-				<p>If your need is digital, then people from all over the world can see it. You can then negotiate a fair price.</p><br>
+				<h6>If your need is digital, then people from all over the world can see it. You can then negotiate a fair price.</h6><br>
 			<h4>3 - Hire the right person for the job.</h4><br>
-				<p>Accomplish your goals. Rinse and repeat.</p>
+				<h6>Accomplish your goals. Rinse and repeat.</h6>
 			<br>
 			<br>
 		</div>
 <footer><br><br>
-  <h4>Made with &hearts; at Ironhack </h4>
-<br><br><br><br>
+  <h4>Made with &hearts; at Ironhack by Daniel Hoffens </h4>
+<br><br>
 </footer>
 </body>
 </html>
