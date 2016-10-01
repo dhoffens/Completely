@@ -24,10 +24,15 @@ function findGeolocations () {
 
 function showGeolocations (theLocation) {
 	// map shows all the pins from current data
+	//console.log(theLocation)
 	theLocation.forEach(function (theResult){
 
 		var theName = theResult.name;
 		//console.log("the name", theName);
+		var theDesc = theResult.description;
+		var address = theResult.address;
+		var budgetLow = theResult.budget_low;
+		var budgetHigh = theResult.budget_high;
 		var theLat = theResult.latitude;
 		//console.log("the lat", theLat);
 		var theLong = theResult.longitude;
@@ -38,16 +43,33 @@ function showGeolocations (theLocation) {
 		var marker = new google.maps.Marker({
 	          position: myLatLng,
 	          map: map,
-	          title: theName
+	          title: theName,
+	          desc: theDesc,
+	          address: address,
+	          budgetlow: budgetLow,
+	          budgethigh: budgetHigh
 	        });
 	
 		marker.setMap(map);
 
-		google.maps.event.addListener(marker, 'click', function() {
-  			$('#myModal').modal('show');
-		});
-	})
-}
+	google.maps.event.addListener(marker, 'click', (function(marker) {
+    	return function() {
+    // make use of `marker.custom_param`
+        var markerName = marker.title
+        //console.log(markerName)
+        var markerDesc = marker.desc
+        //console.log(markerDesc)
+        var markeraddress = marker.address
+        //console.log(markeraddress)
+        var markerbudgetlow = marker.budgetlow
+        //console.log(markerbudgetlow)
+        var markerbudgethigh = marker.budgethigh
+        //console.log(markerbudgethigh)
+    }
+    })(marker));
+})
+	}
+
 
 function handleError (theError) {
 	console.log(theError);

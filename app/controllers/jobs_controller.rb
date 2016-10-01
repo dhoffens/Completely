@@ -2,7 +2,6 @@ class JobsController < ApplicationController
 
 	def index
 		@jobs = Job.all
-		@jop_pin = Job.find_by(params[:id])
 	end
 
 	def new
