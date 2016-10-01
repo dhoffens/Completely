@@ -65,6 +65,20 @@ function showGeolocations (theLocation) {
         //console.log(markerbudgetlow)
         var markerbudgethigh = marker.budgethigh
         //console.log(markerbudgethigh)
+    	$('#myModal').modal('show');
+    	//appendJobTitleToModalHead();
+    	
+    	$('.modal-title').html(markerName);
+    	
+    	var modalBody = `
+    		Description: ${markerDesc} <br>
+    		Location: ${markeraddress} <br>
+    		Pay Range: $${markerbudgetlow} - $${markerbudgethigh} <br>
+    	`;
+
+    	$('.modal-body').html(modalBody)
+
+
     }
     })(marker));
 })
