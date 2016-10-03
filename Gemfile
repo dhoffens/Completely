@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+#pw/user encryption for email server
+gem 'figaro'
 #user to user mailing system
 gem 'mailboxer'
 #geolocation information from address entry

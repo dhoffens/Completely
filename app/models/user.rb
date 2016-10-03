@@ -9,4 +9,8 @@ has_many :jobs
 validates :name, presence: true
 validates :zip, presence: true, numericality: true
 
+def name
+end
+
+
 end
