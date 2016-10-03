@@ -10,8 +10,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #POST /resource
   def create
     super
-
-    WelcomeMailer.welcome_email(current_user).deliver_now
+  
+      if user_signed_in?
+        WelcomeMailer.welcome_email(current_user).deliver_now
+      end
+  
   end
 
   # GET /resource/edit

@@ -1,6 +1,6 @@
 class WelcomeMailer < ApplicationMailer
 	
-	default from: "hi@donedealapp.co"
+	default from: "hi@donedeal.co"
 	
 	def welcome_email(user)
 		@user = user
