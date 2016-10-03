@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 
+#user to user mailing system
+gem 'mailboxer'
 #geolocation information from address entry
 gem 'geocoder'
 #ruby js 

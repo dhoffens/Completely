@@ -15,20 +15,20 @@ footer {
 
 h2 {
 	font-size: 40px;
-	text-shadow: 3px 2px 2px black;
+	text-shadow: 3px 2px 3px black;
 	text-align: center;
 	color: white;
 }
 
 h3, h4, h6 {
-	text-shadow: 2px 2px 1px black;
+	text-shadow: 2px 2px 2px black;
 	text-align: center;
 	color: white;	
 }
 
 h1 {
-	font-size: 60px;
-	text-shadow: 3px 2px 2px black;
+	font-size: 70px;
+	text-shadow: 3px 2px 3px black;
 	text-align: center;
 	color: white;
 }
@@ -41,6 +41,13 @@ h1 {
 	margin-right: auto;
 	margin: 7px;
 	padding: 15px 20px 5px 20px;
+	background-color: #1f77f2;
+	border-color: black;
+}
+
+.home-btn:hover {
+	background-color: #FD0B31;
+	border-color: white;
 }
 
 .nav-btns {
@@ -60,6 +67,7 @@ nav {
 	height: 5vh; 
 	margin: 0;
 	padding: 0;
+	background-color: #1f77f2;
 }
 
 .background {
@@ -95,6 +103,12 @@ nav {
 	height: 100vh;
 }
 
+.submit {
+	background-image: url(/assets/submit.jpg);
+	background-size: cover;
+	height: 100vh;
+}
+
 .content {
 	position:relative;
 	top: 40px;
@@ -105,7 +119,7 @@ nav {
 }
 
 .how {
-	background-color: #5cb85c;
+	background-color: #4286f4;
 }
 
 .donedeal-logo {
@@ -116,4 +130,12 @@ nav {
 .form {
 	color: white;
 	text-shadow: 1px 1px 1px black;	
+}
+
+.done {
+	color: #1f77f2;
+}
+
+.deal {
+	color: #FD0B31;
 }

@@ -1,41 +1,47 @@
-<h2> Submit new Job </h2>
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
 
-<% if @job.errors.any? %>
-	<ul>
-		<% @job.errors.full_messages.each do |msg| %>
-		<li>
-			<%= msg %>
-		</li>
-		<% end %>
-	</ul>
-<% end %>
+<div class="submit"><br><br>
+  <h2> Submit new Job </h2>
 
-<%= form_for [current_user, @job] do |j| %>
+  <% if @job.errors.any? %>
+  	<ul>
+  		<% @job.errors.full_messages.each do |msg| %>
+  		<li>
+  			<%= msg %>
+  		</li>
+  		<% end %>
+  	</ul>
+  <% end %>
 
-<div>
-  <%= j.label :name %>:
-  <%= j.text_field :name %>
+  <%= form_for [current_user, @job] do |j| %>
+
+  <div>
+    <%= j.label :name %>:<br>
+    <%= j.text_field :name %>
+  </div>
+  <div>
+    <%= j.label :description %>:<br>
+    <%= j.text_area :description %>
+  </div>
+  <div>
+    <%= j.label :budget_low %>:<br>
+    <%= j.number_field :budget_low %>
+  </div>
+  <div>
+    <%= j.label :budget_high %>:<br>
+    <%= j.number_field :budget_high %>
+  </div>
+  <div>
+    <%= j.label :address %>:<br>
+    <%= j.text_field :address %>
+  </div>
+  <%= j.button %>
+  <% end %>
 </div>
-
-<div>
-  <%= j.label :description %>:
-  <%= j.text_area :description %>
-</div>
-
-<div>
-  <%= j.label :budget_low %>:
-  <%= j.number_field :budget_low %>
-</div>
-
-<div>
-  <%= j.label :budget_high %>:
-  <%= j.number_field :budget_high %>
-</div>
-
-<div>
-  <%= j.label :address %>:
-  <%= j.text_field :address %>
-</div>
-
-<%= j.button %>
-<% end %>
+</body>
+</html>

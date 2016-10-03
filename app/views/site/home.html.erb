@@ -6,20 +6,24 @@
 
 <body>
 	<div class="background">
-		<div class="content"><br><br><br>
-		<h1>Welcome to <strong>DoneDeal</strong></h1><br><br>
-			<h2>We're a local services marketplace.</h2><br>
-				<h3>Our goal is to connect local professionals with those that require their services.</h3><br>
-					<% unless current_user %>
-					<h3>Start by clicking the Register button in the top left!</h3>
-					<% end %>			
-				<% if current_user %>
-  				<h3> Hey <%= current_user.name %>! </h3>
-				<div>
-					<%= link_to "Post new job", new_user_job_path(current_user), class: "btn btn-success home-btn" %>
-					<a class="btn btn-success home-btn" href="/jobs">All Open Jobs</a>
-				</div>
-				<% end %>
+		<div class="content"><br><br><br><br><br>
+			<div>
+				<h1>Welcome to <strong class="done">Done</strong><strong class="deal">Deal</strong></h1><br><br>
+			</div>
+				<h2>We're a local services marketplace.</h2><br>
+					<h3>Our goal is to connect local professionals with people seeking their services.</h3><br>
+					<!-- if not logged in, show header asking new user to register -->
+						<% unless current_user %>
+						<h3>Start by clicking the <strong class="done">Register</strong> button in the top left!</h3>
+						<% end %>			
+					<!-- if user logged in, say hi and show buttons to post job and view jobs -->
+					<% if current_user %>
+	  				<h3> Hey <%= current_user.name %>! </h3>
+					<div>
+						<%= link_to "Post new job", new_user_job_path(current_user), class: "btn btn-success home-btn" %>
+						<a class="btn btn-success home-btn" href="/jobs">All Open Jobs</a>
+					</div>
+					<% end %>
 		</div>
 	</div>
 		<div class="how"><br>
