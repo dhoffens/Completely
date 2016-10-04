@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#for use in mailbox to paginate
+gem 'bootstrap-will_paginate'
+gem 'will_paginate'
 #pw/user encryption for email server
 gem 'figaro'
 #user to user mailing system

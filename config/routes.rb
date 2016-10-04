@@ -8,9 +8,9 @@ devise_for :users, controllers: {
 
 resources :users do
 	resources :jobs do
-		resources :comments 
+		resources :conversations, only: [:index, :show, :destroy]
 	end
-end
+end 
 
 scope :api do
 	resources :jobs, only: [:index], controller: "jobs_api"

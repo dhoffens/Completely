@@ -10,27 +10,3 @@
   Address: <%= @the_job.address %> <br>
   Coordinates: <%= @the_job.latitude %>, <%= @the_job.longitude %>  
 </div>
-
-<% if @the_job.comments %>
-
-<h4>
-  Comments:
-</h4>
-
-<ul>
-  <% @the_job.comments.each do |the_comment| %>
-    <li>
-      <%= the_comment.message %>
-    </li>
-  <% end %>
-</ul>
-<% end %>
-
-<div>
-  <h4> Add a comment </h4>
-<form>
-	<textarea rows="4" cols="40">
-	</textarea> <br>
-	<button type="submit">Submit comment</button>
-</form>
-</div>
