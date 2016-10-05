@@ -7,7 +7,12 @@ Rails.application.routes.draw do
 	}
 
 	resources :jobs
-	resources :conversations, only: [:index, :show, :destroy]
+	resources :conversations, only: [:index, :show, :destroy] do
+		member do
+			post :reply
+		end
+	end
+
 	resources :messages, only: [:new, :create]  
 	
 

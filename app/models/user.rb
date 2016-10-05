@@ -11,11 +11,9 @@ validates :zip, presence: true, numericality: true
 
 acts_as_messageable
 
-# 	def name
- #      @name = User.name
- #    end
 
- #    def mailboxer_email
- #      @email = User.email
- #    end
+
+	def mailboxer_email(object)
+	 	self.email
+	end
 end
