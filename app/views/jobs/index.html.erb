@@ -44,7 +44,7 @@
 <% @jobs.each do |j| %>
 
 <div> Name: 
-<%= link_to "#{j.name}", user_job_path(current_user, j) %>
+<%= link_to "#{j.name}", job_path(current_user, j) %>
 </div>
 
 <div> Description: 

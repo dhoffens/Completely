@@ -20,8 +20,8 @@
 					<% if current_user %>
 	  				<h3> Hey <%= current_user.name %>! </h3>
 					<div>
-						<%= link_to "Post new job", new_user_job_path(current_user), class: "btn btn-success home-btn" %>
-						<a class="btn btn-success home-btn" href="/jobs">All Open Jobs</a>
+						<%= link_to "Post new job", new_job_path(current_user), class: "btn btn-success home-btn" %>
+						<%= link_to "Browse Open Jobs", jobs_path, class: "btn btn-success home-btn" %>
 					</div>
 					<% end %>
 		</div>

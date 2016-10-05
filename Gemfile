@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#avatar for user profile
+gem 'gravatar_image_tag'
 #for use in mailbox to paginate
 gem 'bootstrap-will_paginate'
 gem 'will_paginate'

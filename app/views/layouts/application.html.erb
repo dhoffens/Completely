@@ -24,15 +24,14 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active">
-          <% unless current_user %>
+          <% if user_signed_in? %>
+            <li class="nav-btns"><%= link_to 'Conversations', conversations_path(current_user) %></li>
+            <li class="nav-btns"><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+            <li class="nav-btns"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
+          <% else %>
             <li class="nav-btns"><%= link_to "Register", new_user_registration_path %></li>
             <li class="nav-btns"><%= link_to "Log in", user_session_path %></li>
           <% end %>
-            <% if current_user %>
-              <li class="nav-btns">
-                <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
-              </li>
-            <% end %>
         <li class="dropdown nav-btns">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -67,6 +66,13 @@
 </nav>
 
     <%= yield %>
+
+<div class="container">
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <%= value %>
+    </div>
+  <% end %>
 
   </body>
 </html>
