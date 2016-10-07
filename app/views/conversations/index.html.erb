@@ -1,9 +1,34 @@
 <h2> Your Conversations </h2>
+<!-- flash bar for status update -->
+<div class="container">
+	<% flash.each do |key, value| %>
+		<div class="alert alert-<%= key %>">
+			<%= value %>
+		</div>
+	<% end %>
+</div>
+<!-- 3 buttons for inbox, sent, trash boxes -->
+<div class="row">
+	<div class="col-sm-3">
+		<ul class="nav nav-pills nav-stacked">
+			<%= mailbox_section 'inbox', @box %>
+			<%= mailbox_section 'sent', @box %>
+			<%= mailbox_section 'trash', @box %>
+		</ul>
+	</div>
 
-<ul class="list-group">
-	<%= render partial: 'conversations/conversation', collection: @conversations %>
-</ul>
+	<div class="col-sm-9">
+		<% if @box == 'trash' %>
+	    	<p><%= link_to 'Empty trash', empty_trash_conversations_path, class: 'btn btn-danger', 
+	    		method: :delete, data: {confirm: 'Are you sure?'} %></p>
+	  	<% end %>
+		
+		<ul class="list-group">
 
-<p><%= link_to 'Start conversation', new_message_path, class: 'btn btn-lg btn-primary' %></p>
+			<%= render partial: 'conversations/conversation', collection: @conversations %>			
+		</ul>
 
-<%= will_paginate %>
+		<p><%= link_to 'Start conversation', new_message_path, class: 'btn btn-lg btn-primary' %></p>
+
+	</div>
+</div>

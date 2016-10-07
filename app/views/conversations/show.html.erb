@@ -1,5 +1,12 @@
 <h2> Conversations </h2>
 
+<div class="container">
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <%= value %>
+    </div>
+  <% end %>
+
 <p>Chatting with
 	<%= render 'conversations/participants', conversation: @conversation %>
 </p>

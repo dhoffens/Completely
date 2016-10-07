@@ -25,7 +25,7 @@
       <ul class="nav navbar-nav">
         <li class="active">
           <% if user_signed_in? %>
-            <li class="nav-btns"><%= link_to 'Conversations', conversations_path(current_user) %></li>
+            <li class="nav-btns"><%= link_to 'Conversations', conversations_path %></li>
             <li class="nav-btns"><%= link_to 'Edit Profile', edit_user_registration_path %></li>
             <li class="nav-btns"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
           <% else %>
@@ -66,13 +66,6 @@
 </nav>
 
     <%= yield %>
-
-<div class="container">
-  <% flash.each do |key, value| %>
-    <div class="alert alert-<%= key %>">
-      <%= value %>
-    </div>
-  <% end %>
 
   </body>
 </html>

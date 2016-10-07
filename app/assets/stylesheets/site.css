@@ -139,3 +139,7 @@ nav {
 .deal {
 	color: #FD0B31;
 }
+
+.inline {
+	display: inline;
+}
