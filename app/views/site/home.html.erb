@@ -8,17 +8,17 @@
 	<div class="background">
 		<div class="content"><br><br><br><br><br>
 			<div>
-				<h1>Welcome to <strong class="done">Done</strong><strong class="deal">Deal</strong></h1><br><br>
+				<h1 class="fp">Welcome to <strong class="done">Done</strong><strong class="deal">Deal</strong></h1><br><br>
 			</div>
-				<h2>We're a local services marketplace.</h2><br>
-					<h3>Our goal is to connect local professionals with people seeking their services.</h3><br>
+				<h2 class="fp">We're a local services marketplace.</h2><br>
+					<h3 class="fp">Our goal is to connect local professionals with people seeking their services.</h3><br>
 					<!-- if not logged in, show header asking new user to register -->
 						<% unless current_user %>
-						<h3>Start by clicking the <strong class="done">Register</strong> button in the top left!</h3>
+						<h3 class="fp">Start by clicking the <strong class="done">Register</strong> button in the top left!</h3>
 						<% end %>			
 					<!-- if user logged in, say hi and show buttons to post job and view jobs -->
 					<% if current_user %>
-	  				<h3> Hey <%= current_user.name %>! </h3>
+	  				<h3 class="fp"> Hey <%= current_user.name %>! </h3>
 					<div>
 						<%= link_to "Post new job", new_job_path(current_user), class: "btn btn-success home-btn" %>
 						<%= link_to "Browse Open Jobs", jobs_path, class: "btn btn-success home-btn" %>
@@ -27,18 +27,18 @@
 		</div>
 	</div>
 		<div class="how"><br>
-			<h3> How DoneDeal Works </h3><br>
-			<h4>1 - Tell us what you'd like to accomplish. We want to help you succeed.</h4><br> 
-				<h6>This could be anything from "I need help moving, learning Spanish, making a web site, teach me how to work out"...or anything in between.</h6> <br><br>
-			<h4>2- Post your job on our interface. Locals will see your post and respond.</h4><br>
-				<h6>If your need is digital, then people from all over the world can see it. You can then negotiate a fair price.</h6><br>
-			<h4>3 - Hire the right person for the job.</h4><br>
-				<h6>Accomplish your goals. Rinse and repeat.</h6>
+			<h3 class="fp"> How DoneDeal Works </h3><br>
+			<h4 class="fp">1 - Tell us what you'd like to accomplish. We want to help you succeed.</h4><br> 
+				<h6 class="fp">This could be anything from "I need help moving, learning Spanish, making a web site, teach me how to work out"...or anything in between.</h6> <br><br>
+			<h4 class="fp">2- Post your job on our interface. Locals will see your post and respond.</h4><br>
+				<h6 class="fp">If your need is digital, then people from all over the world can see it. You can then negotiate a fair price.</h6><br>
+			<h4 class="fp">3 - Hire the right person for the job.</h4><br>
+				<h6 class="fp">Accomplish your goals. Rinse and repeat.</h6>
 			<br>
 			<br>
 		</div>
 <footer><br><br>
-  <h4>Made with &hearts; at Ironhack by Daniel Hoffens </h4>
+  <h4 class="fp">Made with &hearts; at Ironhack in Miami, FL by Daniel</h4>
 <br><br>
 </footer>
 </body>

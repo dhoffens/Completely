@@ -1,13 +1,12 @@
-<li>
+<div class="convo">
 	<!-- list-group-item clearfix -->
 	<%= link_to conversation.subject, conversation_path(conversation) %>
 
-	<div class="btn-group-vertical pull-right">
+	<div class="btn-group-vertical pull-right mb-btns">
 		<% if conversation.is_trashed?(current_user) %>
 			<%= link_to 'Restore', restore_conversation_path(conversation), class: 'btn btn-xs btn-info', method: :post %>
 		<% else %>
 			<%= link_to 'Move to trash', conversation_path(conversation), class: 'btn btn-xs btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
-
 			<% if conversation.is_unread?(current_user) %>
 				<%= link_to 'Mark as read', mark_as_read_conversation_path(conversation), class: 'btn btn-xs btn-info', method: :post %>
 			<% end %>
@@ -15,8 +14,8 @@
 	</div>
 
 	<p><%= render 'conversations/participants', 
-		conversation: @conversations %></p>
+		conversation: conversation %></p>
 
 	<p> <%= conversation.last_message.body %> 
 	<small>(<span class="text-muted"> <%= conversation.last_message.created_at.strftime("%-d %B %Y, %H:%M:%S") %></span></small></p>
-</li>
+</div>

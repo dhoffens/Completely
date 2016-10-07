@@ -1,4 +1,3 @@
-<h2> Your Conversations </h2>
 <!-- flash bar for status update -->
 <div class="container">
 	<% flash.each do |key, value| %>
@@ -10,11 +9,13 @@
 <!-- 3 buttons for inbox, sent, trash boxes -->
 <div class="row">
 	<div class="col-sm-3">
-		<ul class="nav nav-pills nav-stacked">
+		<h2>Conversations </h2>
+		<ul class="nav nav-pills nav-stacked boxstyle">
 			<%= mailbox_section 'inbox', @box %>
 			<%= mailbox_section 'sent', @box %>
 			<%= mailbox_section 'trash', @box %>
 		</ul>
+			<%= link_to 'Start conversation', new_message_path, class: 'btn btn-md btn-primary' %>
 	</div>
 
 	<div class="col-sm-9">
@@ -23,12 +24,9 @@
 	    		method: :delete, data: {confirm: 'Are you sure?'} %></p>
 	  	<% end %>
 		
-		<ul class="list-group">
+		<div class="list-group boxstyle">
 
 			<%= render partial: 'conversations/conversation', collection: @conversations %>			
-		</ul>
-
-		<p><%= link_to 'Start conversation', new_message_path, class: 'btn btn-lg btn-primary' %></p>
-
+		</div>
 	</div>
 </div>
