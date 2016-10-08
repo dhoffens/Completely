@@ -1,27 +1,27 @@
 <div class="login"><br>
 
-<h2>Sign up</h2>
+<h2 class="fp">Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :name, :class => "form" %><br />
+    <%= f.label :name, :class => "form fp" %><br />
     <%= f.text_field :name, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :email, :class => "form" %><br />
+    <%= f.label :email, :class => "form fp" %><br />
     <%= f.email_field :email %>
   </div>
 
   <div class="field">
-    <%= f.label :zip, :class => "form" %><br />
+    <%= f.label :zip, :class => "form fp" %><br />
     <%= f.text_field :zip %>
   </div>
 
   <div class="field">
-    <%= f.label :password, :class => "form" %><br>
+    <%= f.label :password, :class => "form fp" %><br>
     <% if @minimum_password_length %>
     <p class="form">(<%= @minimum_password_length %> characters minimum)</p>
     <% end %>
@@ -30,7 +30,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation, :class => "form" %><br />
+    <%= f.label :password_confirmation, :class => "form fp" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
