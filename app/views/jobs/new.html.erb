@@ -6,7 +6,7 @@
 <body>
 
 <div class="submit"><br><br>
-  <h2> Submit new Job </h2>
+  <h2 class="fp"> Submit new Job </h2>
 
   <% if @job.errors.any? %>
   	<ul>
@@ -17,6 +17,8 @@
   		<% end %>
   	</ul>
   <% end %>
+
+  <h3 class="fp"> When posting a new job we ask for a few pieces of information. Name it, describe it in a few sentences, specify how much you'd like to spend on completing the task, and an approximate area of where the task is. </h3>
 
   <%= form_for @job do |j| %>
 
