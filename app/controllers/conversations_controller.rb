@@ -6,16 +6,12 @@ class ConversationsController < ApplicationController
 	###################################################################
 	def index	
 		if @box.eql? 'inbox'
-			@conversations = @mailbox.inbox #.paginate(page: params[:page], per_page: 10)
+			@conversations = @mailbox.inbox 
 		elsif @box.eql? 'sentbox'
-			@conversations = @mailbox.sentbox #.paginate(page: params[:page], per_page: 10)
+			@conversations = @mailbox.sentbox
 		else
-			@conversations = @mailbox.trash #.paginate(page: params[:page], per_page: 10)
+			@conversations = @mailbox.trash 
 		end
-
-		# respond_to do |format|
-  #     	format.html { render @conversations if request.xhr? }
-  #   	end
 	end
 
 	def show
@@ -85,7 +81,7 @@ class ConversationsController < ApplicationController
 	private
 
 	def get_box
-		if params[:box].blank? or !['inbox', 'sent', 'trash'].include?(params[:box])
+		if params[:box].blank? or !['inbox', 'sentbox', 'trash'].include?(params[:box])
 		params[:box] = 'inbox'
 		end
 		
