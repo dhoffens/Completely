@@ -26,7 +26,7 @@ function showGeolocations (theLocation) {
 	// map shows all the pins from current data
 	//console.log(theLocation)
 	theLocation.forEach(function (theResult){
-
+		console.log(theResult)
 		var theName = theResult.name;
 		//console.log("the name", theName);
 		var theDesc = theResult.description;

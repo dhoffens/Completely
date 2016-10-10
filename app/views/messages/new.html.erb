@@ -2,17 +2,17 @@
 
 <%= form_tag messages_path, method: :post do %>
   <div class="form-group">
-    <%= label_tag 'message[subject]', 'Subject' %>
+    <%= label_tag 'message[subject]', 'Subject', class: 'center' %>
     <%= text_field_tag 'message[subject]', nil, class: 'form-control', required: true %>
   </div>
 
   <div class="form-group">
-    <%= label_tag 'message[body]', 'Message' %>
+    <%= label_tag 'message[body]', 'Message', class: 'center' %>
     <%= text_area_tag 'message[body]', nil, cols: 3, class: 'form-control', required: true %>
   </div>
 
   <div class="form-group">
-    <%= label_tag 'recipient', 'Choose recipients' %>
+    <%= label_tag 'recipient', 'Choose recipients', class: 'center' %>
     <%= select_tag 'recipient', recipients_options, multiple: true, class: 'form-control' %>
   </div>
 
