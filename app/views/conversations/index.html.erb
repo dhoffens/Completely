@@ -12,7 +12,7 @@
 		<h2>Conversations </h2>
 		<ul class="nav nav-pills nav-stacked boxstyle">
 			<%= mailbox_section 'inbox', @box %>
-			<%= mailbox_section 'sent', @box %>
+			<%= mailbox_section 'sentbox', @box %>
 			<%= mailbox_section 'trash', @box %>
 		</ul>
 			<%= link_to 'Start conversation', new_message_path, class: 'btn btn-md btn-primary' %>
