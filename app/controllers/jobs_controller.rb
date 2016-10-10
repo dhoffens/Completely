@@ -14,7 +14,7 @@ class JobsController < ApplicationController
 		new_job.user_id = current_user.id
 
 		if new_job.save
-			redirect_to user_jobs_path(current_user)
+			redirect_to jobs_path(current_user)
 		else
 			@job = new_job
 
