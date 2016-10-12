@@ -168,3 +168,9 @@ nav {
 .center {
 	text-align: center;
 }
+
+.convo-form {
+	width: 50%;
+    text-align: center;
+    margin: auto;
+}
