@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 	}
 
 	resources :jobs
+	resources :users
 	
 	resources :conversations, only: [:index, :show, :destroy] do
 		member do
