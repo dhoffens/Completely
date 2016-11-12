@@ -42,4 +42,7 @@ Rails.application.routes.draw do
 	get '/purpose', to: 'site#purpose'
 	get '/company', to: 'site#company'
 	get '/contact', to: 'site#contact'
+
+	get '/users', to: 'users#index'
+
 end

@@ -2,7 +2,11 @@
 	All Users
 </h2>
 
+<p>
 <%= @users.each do |u| %>
-<%= u.name %>
-<%= u.email %>
-<% end %><br>
+<%= u.name %><br>
+<%= u.email %><br>
+<%= u.zip %>
+<br><br>
+<% end %>
+</p>
